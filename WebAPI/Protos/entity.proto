@@ -1,0 +1,25 @@
+﻿syntax = "proto3";
+
+package entities;
+
+// The task service definition
+
+service Entities{
+	// Send a greeting
+
+	rpc CreateEntity (CreateEntityRequest) returns (CreateEntityReply);
+}
+
+// The request messsge containing the task details
+
+messasge CreateEntityRequest {
+	string title = 1;
+	string description = 2;
+	// other fields...
+}
+
+// The response message containing the entity's ID
+
+messasge CreateEntityReply{
+	string id = 1;
+}
