@@ -9,7 +9,7 @@ Onion Architecture: This is a software architectural pattern that promotes maint
 
 *Infrastructure Layer: This is the outermost layer. It contains elements like data access logic, external services implementations, and third-party API integrations. In C#, this would include Entity Framework for database operations, email service providers, etc.
 
-*Presentation Layer: Not always visualized as a part of the Onion Architecture but important in application design. It's where the UI (User Interface) resides. In a C# application, this could be an MVC (Model-View-Controller) web app, a desktop application, or even a mobile application.
+*Presentation Layer / WebAPI: Not always visualized as a part of the Onion Architecture but important in application design. It's where the UI (User Interface) resides. In a C# application, this could be an MVC (Model-View-Controller) web app, a desktop application, or even a mobile application.
 
 *gRPC: It stands for gRPC Remote Procedure Calls. gRPC is an open-source remote procedure call system initially developed by Google. It uses HTTP/2 for transport, Protocol Buffers as the interface description language, and it provides features like authentication, load balancing, and more.
 
