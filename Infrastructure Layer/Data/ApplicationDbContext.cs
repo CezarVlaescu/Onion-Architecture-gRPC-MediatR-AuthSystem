@@ -5,6 +5,9 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using DbContext = Microsoft.EntityFrameworkCore.DbContext;
 
 namespace Infrastructure_Layer.Data
 {
@@ -13,6 +16,8 @@ namespace Infrastructure_Layer.Data
     {
         // Define DbSets for entities
 
-        public DbSet<Entity>? EntityContext {  get; set; }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        public Microsoft.EntityFrameworkCore.DbSet<Entity>? EntityContext {  get; set; }
     }
 }

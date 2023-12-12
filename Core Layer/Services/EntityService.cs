@@ -28,13 +28,11 @@ namespace Core_Layer.Services
             return await _entityRepository.AddAsync(entity);
         }
 
-        public async Task<Entity> GetEntityByIdAsync(Guid id)
+        public async Task<Entity> GetEntityByIdAsync(int id)
         {
             var entity = await _entityRepository.GetByIdAsync(id);
 
             return entity == null ? throw new NotFoundException(nameof(Entity), id) : entity;
         }
-
-
     }
 }

@@ -1,0 +1,14 @@
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\bin\Debug\net6.0\Core Layer.deps.json
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\bin\Debug\net6.0\Core Layer.runtimeconfig.json
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\bin\Debug\net6.0\Core Layer.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\bin\Debug\net6.0\Core Layer.pdb
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\Core Layer.csproj.AssemblyReference.cache
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\Core Layer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\Core Layer.AssemblyInfoInputs.cache
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\Core Layer.AssemblyInfo.cs
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\Core Layer.csproj.CoreCompileInputs.cache
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\Core Layer.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\refint\Core Layer.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\Core Layer.pdb
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\Core Layer.genruntimeconfig.cache
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Core Layer\obj\Debug\net6.0\ref\Core Layer.dll

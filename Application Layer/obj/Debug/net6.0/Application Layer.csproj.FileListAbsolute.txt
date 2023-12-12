@@ -1,0 +1,17 @@
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\bin\Debug\net6.0\Application Layer.deps.json
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\bin\Debug\net6.0\Application Layer.runtimeconfig.json
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\bin\Debug\net6.0\Application Layer.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\bin\Debug\net6.0\Application Layer.pdb
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\bin\Debug\net6.0\Core Layer.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\bin\Debug\net6.0\Core Layer.pdb
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.csproj.AssemblyReference.cache
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.AssemblyInfoInputs.cache
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.AssemblyInfo.cs
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.csproj.CoreCompileInputs.cache
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.csproj.CopyComplete
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\refint\Application Layer.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.pdb
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\Application Layer.genruntimeconfig.cache
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\Application Layer\obj\Debug\net6.0\ref\Application Layer.dll

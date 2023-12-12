@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Data.Entity;
 
 namespace Infrastructure_Layer.Repositories
 {
@@ -27,11 +28,8 @@ namespace Infrastructure_Layer.Repositories
             return entity;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync<T>()
-        {
-            return (IEnumerable<T>) await _dbcontext.EntityContext.ToListAsync();
-        }
+        public async Task<IEnumerable<dynamic>> GetAllAsync() => await _dbcontext.EntityContext.ToListAsync();
 
-        public async Task<Entity> GetByIdAsync(Guid id) => await _dbcontext.EntityContext.FindAsync(id);
+        public async Task<Entity> GetByIdAsync(int id) => await _dbcontext.EntityContext.FindAsync(id);
     }
 }

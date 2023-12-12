@@ -1,4 +1,5 @@
-﻿using Application_Layer.Queries;
+﻿using Application_Layer.Dtos;
+using Application_Layer.Queries;
 using AutoMapper;
 using Core_Layer.Interfaces;
 using MediatR;
@@ -7,7 +8,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebAPI.Dtos;
 
 namespace Application_Layer.Handlers
 {
@@ -25,7 +25,7 @@ namespace Application_Layer.Handlers
         public async Task<IEnumerable<EntityDto>> Handle(GetEntityByIdQuery request, CancellationToken cancellationToken)
         {
             var entity = await _entityRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<EntityDto>>(entity, cancellationToken);
+            return _mapper.Map<IEnumerable<EntityDto>>(entity);
         }
     }
 }

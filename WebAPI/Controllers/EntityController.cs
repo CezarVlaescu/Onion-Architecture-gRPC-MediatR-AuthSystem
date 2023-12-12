@@ -1,6 +1,7 @@
-﻿using MediatR;
+﻿using Application_Layer.Commands;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using WebAPI.Dtos;
+using Application_Layer.Dtos;
 
 namespace WebAPI.Controllers
 {

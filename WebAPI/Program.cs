@@ -1,11 +1,16 @@
+using Application_Layer.Injection;
+using Infrastructure_Layer.Injection;
 using WebAPI.Middleware;
-using WebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container. ( MediatR, AutoMapper
-
 builder.Services.AddControllers();
+
+// Add services to the container. ( MediatR, AutoMapper )
+
+builder.Services.AddApplicationLayer();
+builder.Services.AddInfrastructureLayer(builder.Configuration);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -20,10 +25,6 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapGrpcService<GrpcEntityService>();
-    });
 }
 
 app.UseHttpsRedirection();

@@ -10,8 +10,8 @@ namespace Core_Layer.Interfaces
     // Create your interface for entity repository
     public interface IEntityRepository
     {
-        Task<Entity> GetByIdAsync(Guid id);
-        Task<IEnumerable<T>> GetAllAsync<T>();
+        Task<Entity> GetByIdAsync(int id);
+        Task<IEnumerable<dynamic>> GetAllAsync();
         Task<Entity> AddAsync(Entity entity);
 
         // Other CRUD operations

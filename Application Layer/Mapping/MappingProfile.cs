@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebAPI.Dtos;
+using Application_Layer.Dtos;
 using AutoMapper;
 
 namespace Application_Layer.Mapping

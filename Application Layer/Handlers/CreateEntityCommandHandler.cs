@@ -1,4 +1,5 @@
 ﻿using Application_Layer.Commands;
+using Application_Layer.Dtos;
 using Core_Layer.Entities;
 using Core_Layer.Interfaces;
 using MediatR;
@@ -8,7 +9,6 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
-using WebAPI.Dtos;
 
 namespace Application_Layer.Handlers
 {

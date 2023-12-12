@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core Layer", "Core Layer\Core Layer.csproj", "{F2D23F89-E9C3-4B64-B811-4D078D17D169}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core Layer", "Core Layer\Core Layer.csproj", "{F2D23F89-E9C3-4B64-B811-4D078D17D169}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application Layer", "Application Layer\Application Layer.csproj", "{1662266B-85D4-4391-B2C1-091601F68615}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application Layer", "Application Layer\Application Layer.csproj", "{1662266B-85D4-4391-B2C1-091601F68615}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure Layer", "Infrastructure Layer\Infrastructure Layer.csproj", "{12B40EF9-7F29-4B3C-B0D7-DF4B1FEF882A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure Layer", "Infrastructure Layer\Infrastructure Layer.csproj", "{12B40EF9-7F29-4B3C-B0D7-DF4B1FEF882A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{72DE912A-29E4-4235-A4FF-D5981C86DEE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{72DE912A-29E4-4235-A4FF-D5981C86DEE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcAuthService", "GrpcAuthService\GrpcAuthService.csproj", "{7D002A54-1946-4502-AD68-2141ACE9232B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{72DE912A-29E4-4235-A4FF-D5981C86DEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72DE912A-29E4-4235-A4FF-D5981C86DEE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72DE912A-29E4-4235-A4FF-D5981C86DEE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D002A54-1946-4502-AD68-2141ACE9232B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D002A54-1946-4502-AD68-2141ACE9232B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D002A54-1946-4502-AD68-2141ACE9232B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D002A54-1946-4502-AD68-2141ACE9232B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
