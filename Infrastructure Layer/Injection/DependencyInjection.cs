@@ -15,6 +15,10 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Core_Layer.Interfaces.Repository;
+using Core_Layer.Interfaces.Repository.Auth;
+using Infrastructure_Layer.Repositories.Auth;
+using Core_Layer.Interfaces.Services.Auth;
+using Infrastructure_Layer.Services.Auth;
 
 namespace Infrastructure_Layer.Injection
 
@@ -31,7 +35,16 @@ namespace Infrastructure_Layer.Injection
 
         public static IServiceCollection AddInfrastructureLayer(this IServiceCollection services, Microsoft.Extensions.Configuration.ConfigurationManager configuration)
         {
-            services.AddScoped<IEntityRepository, Repositories.EntityRepository>();
+            services.AddScoped<IEntityRepository, EntityRepository>();
+
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IUserService, UserService>();
+
+
+
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
