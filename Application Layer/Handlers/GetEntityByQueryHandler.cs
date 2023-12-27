@@ -1,7 +1,7 @@
 ﻿using Application_Layer.Dtos;
 using Application_Layer.Queries;
 using AutoMapper;
-using Core_Layer.Interfaces;
+using Core_Layer.Interfaces.Repository;
 using MediatR;
 using System;
 using System.Collections.Generic;

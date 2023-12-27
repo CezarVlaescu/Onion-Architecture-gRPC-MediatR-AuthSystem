@@ -1,7 +1,7 @@
 ﻿using Application_Layer.Commands;
 using Application_Layer.Dtos;
 using Core_Layer.Entities;
-using Core_Layer.Interfaces;
+using Core_Layer.Interfaces.Repository;
 using MediatR;
 using System;
 using System.Collections.Generic;

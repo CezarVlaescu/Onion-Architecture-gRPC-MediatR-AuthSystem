@@ -1,5 +1,4 @@
 ﻿using Core_Layer.Entities;
-using Core_Layer.Interfaces;
 using Infrastructure_Layer.Data;
 using Infrastructure_Layer.Repositories;
 using MediatR;
@@ -15,6 +14,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Core_Layer.Interfaces.Repository;
 
 namespace Infrastructure_Layer.Injection
 
@@ -31,7 +31,7 @@ namespace Infrastructure_Layer.Injection
 
         public static IServiceCollection AddInfrastructureLayer(this IServiceCollection services, Microsoft.Extensions.Configuration.ConfigurationManager configuration)
         {
-            services.AddScoped<IEntityRepository, EntityRepository>();
+            services.AddScoped<IEntityRepository, Repositories.EntityRepository>();
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));

@@ -32,11 +32,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Core Layer\\Core Layer.csproj": {
-                "projectPath": "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Core Layer\\Core Layer.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -138,7 +134,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Application Layer\\Application Layer.csproj": {
+                "projectPath": "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Application Layer\\Application Layer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

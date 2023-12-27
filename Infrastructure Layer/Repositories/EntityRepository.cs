@@ -1,5 +1,4 @@
 ﻿using Core_Layer.Entities;
-using Core_Layer.Interfaces;
 using Infrastructure_Layer.Data;
 using System;
 using System.Collections.Generic;
@@ -8,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Entity;
+using Core_Layer.Interfaces.Repository;
 
 namespace Infrastructure_Layer.Repositories
 {

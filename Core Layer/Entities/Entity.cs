@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core_Layer.Entities
 {
-    // Define your entities here
+    // Define your entities for the database here
     public class Entity : Common_Entity
     {
         public string? FirstName { get; set; }  

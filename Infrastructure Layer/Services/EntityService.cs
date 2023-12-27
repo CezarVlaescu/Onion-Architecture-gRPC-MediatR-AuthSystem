@@ -1,13 +1,14 @@
 ﻿using Core_Layer.Entities;
 using Core_Layer.Exceptions;
-using Core_Layer.Interfaces;
+using Core_Layer.Interfaces.Repository;
+using Core_Layer.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core_Layer.Services
+namespace Infrastructure_Layer.Services
 {
     public class EntityService : IEntityService
     {
