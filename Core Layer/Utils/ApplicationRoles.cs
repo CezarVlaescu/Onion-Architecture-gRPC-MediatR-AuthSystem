@@ -11,6 +11,7 @@ namespace Core_Layer.Utils
         Admin,
         Owner,
         Agency,
-        Customer
+        Customer,
+        Empty
     }
 }

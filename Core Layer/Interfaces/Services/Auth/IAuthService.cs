@@ -9,7 +9,7 @@ namespace Core_Layer.Interfaces.Services.Auth
 {
     public interface IAuthService
     {
-        Task<string> GenerateJwtToken(User user, CancellationToken cancellationToken);
+        Task<string> GenerateJwtToken(User user, CancellationToken cancellationToken); // TO DO separate service for Token -> SRP Principle
         Task<bool> ValidateUserCredentialAsync(string username, string password, CancellationToken cancellationToken);
     }
 }
