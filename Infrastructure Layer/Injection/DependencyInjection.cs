@@ -32,18 +32,13 @@ namespace Infrastructure_Layer.Injection
 
     public static class DependencyInjection
     {
-
-        public static IServiceCollection AddInfrastructureLayer(this IServiceCollection services, Microsoft.Extensions.Configuration.ConfigurationManager configuration)
+        public static IServiceCollection AddInfrastructureLayer(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddScoped<IEntityRepository, EntityRepository>();
-
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserService, UserService>();
-
-
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {

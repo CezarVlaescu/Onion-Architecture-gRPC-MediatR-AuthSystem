@@ -101,3 +101,6 @@ C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\WebAPI\bin\Debug\
 C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\WebAPI\bin\Debug\net6.0\Auth0.ManagementApi.dll
 C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\WebAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\WebAPI\bin\Debug\net6.0\SlackAPI.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\vlaes\source\repos\Onion Arhitecture - MediatR - gRPC\WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll

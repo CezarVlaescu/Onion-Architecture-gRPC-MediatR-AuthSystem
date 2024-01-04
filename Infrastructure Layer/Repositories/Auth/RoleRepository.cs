@@ -1,4 +1,4 @@
-﻿using Auth0.ManagementApi.Models;
+﻿using Core_Layer.Entities.Auth;
 using Core_Layer.Interfaces.Repository.Auth;
 using Core_Layer.Utils;
 using Infrastructure_Layer.Data;

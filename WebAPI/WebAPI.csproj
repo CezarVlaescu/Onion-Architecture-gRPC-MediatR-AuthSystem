@@ -10,7 +10,6 @@
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="Grpc.AspNetCore" Version="2.59.0" />
     <PackageReference Include="MediatR" Version="11.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
@@ -18,6 +17,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Application Layer\Application Layer.csproj" />
+    <ProjectReference Include="..\Infrastructure Layer\Infrastructure Layer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

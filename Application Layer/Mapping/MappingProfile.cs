@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Application_Layer.Dtos;
 using AutoMapper;
+using Application_Layer.Dtos.Auth;
+using Core_Layer.Entities.Auth;
 
 namespace Application_Layer.Mapping
 {
@@ -14,8 +16,7 @@ namespace Application_Layer.Mapping
     {
         public MappingProfile() 
         {
-            //CreateMap<Entity, EntityDto>();
-            //CreateMap<CreateEntityCommand, Entity>();
+            CreateMap<RegisterDto, User>().ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Username));
         }
     }
 }

@@ -21,6 +21,8 @@ namespace Application_Layer.Handlers.Auth
 
         public async Task<User> Handle(CreateUserCommand command, CancellationToken cancellationToken)
         {
+            cancellationToken.ThrowIfCancellationRequested();   
+
             RegisterDto registerDto = command.RegisterData;
 
             User newUser = await _userService.RegisterUserAsync(

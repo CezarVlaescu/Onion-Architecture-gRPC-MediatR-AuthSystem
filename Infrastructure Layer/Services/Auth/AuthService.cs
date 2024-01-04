@@ -1,4 +1,4 @@
-﻿using Auth0.ManagementApi.Models;
+﻿using Core_Layer.Entities.Auth;
 using Core_Layer.Interfaces.Services.Auth;
 using Infrastructure_Layer.Repositories.Auth;
 using Microsoft.Extensions.Configuration;
@@ -32,7 +32,7 @@ namespace Infrastructure_Layer.Services.Auth
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(ClaimTypes.Name, user.Username),
                     new Claim(ClaimTypes.Email, user.Email),
                 }),
                 Expires = DateTime.UtcNow.AddDays(7),

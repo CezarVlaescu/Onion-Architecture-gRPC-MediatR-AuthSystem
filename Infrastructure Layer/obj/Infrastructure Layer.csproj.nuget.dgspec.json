@@ -262,15 +262,11 @@
             },
             "Grpc.AspNetCore": {
               "target": "Package",
-              "version": "[2.59.0, )"
+              "version": "[2.60.0, )"
             },
             "MediatR": {
               "target": "Package",
               "version": "[11.1.0, )"
-            },
-            "Microsoft.AspNet.Identity.Core": {
-              "target": "Package",
-              "version": "[2.2.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

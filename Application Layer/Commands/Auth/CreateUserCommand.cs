@@ -11,6 +11,6 @@ namespace Application_Layer.Commands.Auth
 {
     public class CreateUserCommand : IRequest<User>
     {
-        public RegisterDto RegisterData { get; set; } // represents a change in state of the system
+        public RegisterDto? RegisterData { get; set; } // represents a change in state of the system
     }
 }

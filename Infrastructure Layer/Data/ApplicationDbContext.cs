@@ -16,8 +16,6 @@ namespace Infrastructure_Layer.Data
         // Define DbSets for entities
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-
-        public DbSet<Entity>? EntityContext {  get; set; }
         public DbSet<User>? Users { get; set; }
     }
 }
