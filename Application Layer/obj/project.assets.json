@@ -1644,6 +1644,25 @@
             "rid": "win"
           }
         }
+      },
+      "Core Layer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "EntityFramework": "6.4.4",
+          "Grpc.AspNetCore": "2.59.0",
+          "MediatR": "11.1.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "Microsoft.EntityFrameworkCore": "7.0.11"
+        },
+        "compile": {
+          "bin/placeholder/Core Layer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core Layer.dll": {}
+        }
       }
     }
   },
@@ -5186,6 +5205,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Core Layer/1.0.0": {
+      "type": "project",
+      "path": "../Core Layer/Core Layer.csproj",
+      "msbuildProject": "../Core Layer/Core Layer.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5193,6 +5217,7 @@
       "Auth0.ManagementApi >= 7.25.0",
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
+      "Core Layer >= 1.0.0",
       "EntityFramework >= 6.4.4",
       "FluentValidation >= 11.8.1",
       "Grpc.AspNetCore >= 2.59.0",
@@ -5234,7 +5259,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Core Layer\\Core Layer.csproj": {
+              "projectPath": "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Core Layer\\Core Layer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

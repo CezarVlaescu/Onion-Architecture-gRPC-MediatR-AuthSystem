@@ -14,7 +14,7 @@ namespace Core_Layer.Entities.Auth
         public byte[]? PasswordHash { get; set; }
         public byte[]? PasswordSalt { get; set; }
         //public Photos? Photo { get; set; }
-        public Roles? Role { get; set; }
+        public Roles Role { get; set; }
     }
 
 }

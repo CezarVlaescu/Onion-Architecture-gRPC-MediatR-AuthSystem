@@ -1,4 +1,4 @@
-﻿using Auth0.ManagementApi.Models;
+﻿using Core_Layer.Entities.Auth;
 using Core_Layer.Utils;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Core_Layer.Interfaces.Services.Auth
 {
     public interface IRoleService
     {
-        Task<bool> CheckUserRoleAsync(User user, Role role);
-        Task<IEnumerable<Roles>> GetUserRolesAsync(User user);
+        Task<bool> CheckUserRoleAsync(User user, Roles role);
+        Task<Roles> GetUserRoleAsync(User user);
     }
 }

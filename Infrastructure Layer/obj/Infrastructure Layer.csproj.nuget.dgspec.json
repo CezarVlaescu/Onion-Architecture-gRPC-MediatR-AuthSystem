@@ -32,7 +32,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Core Layer\\Core Layer.csproj": {
+                "projectPath": "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Core Layer\\Core Layer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -134,11 +138,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Application Layer\\Application Layer.csproj": {
-                "projectPath": "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Application Layer\\Application Layer.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -268,6 +268,10 @@
               "target": "Package",
               "version": "[11.1.0, )"
             },
+            "Microsoft.AspNet.Identity.Core": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -275,6 +279,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

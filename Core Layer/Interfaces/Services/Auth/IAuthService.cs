@@ -1,4 +1,4 @@
-﻿using Auth0.ManagementApi.Models;
+﻿using Core_Layer.Entities.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;

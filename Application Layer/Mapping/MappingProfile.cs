@@ -1,5 +1,4 @@
 ﻿using Application_Layer.Commands;
-using Core_Layer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +14,8 @@ namespace Application_Layer.Mapping
     {
         public MappingProfile() 
         {
-            CreateMap<Entity, EntityDto>();
-            CreateMap<CreateEntityCommand, Entity>();
+            //CreateMap<Entity, EntityDto>();
+            //CreateMap<CreateEntityCommand, Entity>();
         }
     }
 }

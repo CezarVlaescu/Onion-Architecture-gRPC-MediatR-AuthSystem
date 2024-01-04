@@ -46,6 +46,8 @@ namespace Infrastructure_Layer.Services.Auth
 
         public async Task<bool> ValidateUserCredentialAsync(string username, string password, CancellationToken cancellationToken)
         {
+            cancellationToken.ThrowIfCancellationRequested();
+
             var user = await _userRepository.GetByUsernameAsync(username);
             if (user == null) return false;
             return VerifyPassword(password, user.PasswordHash, user.PasswordSalt);
