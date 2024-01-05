@@ -19,6 +19,8 @@ using Core_Layer.Interfaces.Repository.Auth;
 using Infrastructure_Layer.Repositories.Auth;
 using Core_Layer.Interfaces.Services.Auth;
 using Infrastructure_Layer.Services.Auth;
+using Core_Layer.Interfaces.Utils;
+using Infrastructure_Layer.Utils;
 
 namespace Infrastructure_Layer.Injection
 
@@ -39,6 +41,7 @@ namespace Infrastructure_Layer.Injection
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IPasswordHasher, PasswordHasher>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
