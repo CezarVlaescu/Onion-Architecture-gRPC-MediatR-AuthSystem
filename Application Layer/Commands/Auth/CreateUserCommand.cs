@@ -1,5 +1,6 @@
 ﻿using Application_Layer.Dtos.Auth;
 using Core_Layer.Entities.Auth;
+using Infrastructure_Layer.Utils;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application_Layer.Commands.Auth
 {
-    public class CreateUserCommand : IRequest<User>
+    public class CreateUserCommand : IRequest<UserRegistrationResult>
     {
         public RegisterDto? RegisterData { get; set; } // represents a change in state of the system
     }

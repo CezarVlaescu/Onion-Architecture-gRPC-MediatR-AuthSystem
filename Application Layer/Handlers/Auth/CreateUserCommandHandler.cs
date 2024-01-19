@@ -2,6 +2,7 @@
 using Application_Layer.Dtos.Auth;
 using Core_Layer.Entities.Auth;
 using Core_Layer.Interfaces.Services.Auth;
+using Infrastructure_Layer.Utils;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Application_Layer.Handlers.Auth
 {
-    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, User>
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserRegistrationResult>
     {
         private readonly IUserService _userService;
         public CreateUserCommandHandler(IUserService userService) 
@@ -19,21 +20,21 @@ namespace Application_Layer.Handlers.Auth
             _userService = userService;
         }
 
-        public async Task<User> Handle(CreateUserCommand command, CancellationToken cancellationToken)
+        public async Task<UserRegistrationResult> Handle(CreateUserCommand command, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();   
 
             RegisterDto registerDto = command.RegisterData;
 
-            User newUser = await _userService.RegisterUserAsync(
+            UserRegistrationResult registrationResult = await _userService.RegisterUserAsync(
                 registerDto.Username,
                 registerDto.Email,
                 registerDto.Password,
                 registerDto.Firstname,
                 registerDto.Lastname
-                );
+            );
 
-            return newUser;
+            return registrationResult;
         }
     }
 }

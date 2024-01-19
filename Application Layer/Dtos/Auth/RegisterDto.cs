@@ -10,20 +10,20 @@ namespace Application_Layer.Dtos.Auth
     public class RegisterDto
     {
         [Required]
-        public string Username { get; set; }
+        public string? Username { get; set; }
 
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
         [StringLength(100, MinimumLength =6)]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         [Required]
-        public string Firstname { get; set; }
+        public string? Firstname { get; set; }
 
         [Required]
-        public string Lastname { get; set; }    
+        public string? Lastname { get; set; }    
     }
 }

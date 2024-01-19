@@ -5,6 +5,7 @@ using Infrastructure_Layer.Injection;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddLogging();
 
 // Add services to the container. ( MediatR, AutoMapper )
 

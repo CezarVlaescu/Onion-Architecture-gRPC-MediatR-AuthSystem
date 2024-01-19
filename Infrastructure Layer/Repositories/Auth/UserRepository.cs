@@ -49,8 +49,8 @@ namespace Infrastructure_Layer.Repositories.Auth
             await _dbContext.Users.FindAsync(id) ?? throw new KeyNotFoundException("User not found");
 
 
-        public async Task<User> GetByUsernameAsync(string username) => 
-            await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username) ?? throw new KeyNotFoundException("User with username not found");
+        public async Task<User> GetByUsernameAsync(string username) =>
+            await _dbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
 
         public async Task UpdateAsync(User user)
         {

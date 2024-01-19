@@ -3,6 +3,7 @@ using Core_Layer.Entities.Auth;
 using Core_Layer.Interfaces.Services.Auth;
 using Core_Layer.Interfaces.Utils;
 using Infrastructure_Layer.Repositories.Auth;
+using Infrastructure_Layer.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,11 +26,11 @@ namespace Infrastructure_Layer.Services.Auth
 
         public async Task<User> GetUserAsync(string username) => await _userRepository.GetByUsernameAsync(username);
 
-        public async Task<User> RegisterUserAsync(string username, string email, string password, string firstname, string lastname)
+        public async Task<UserRegistrationResult> RegisterUserAsync(string username, string email, string password, string firstname, string lastname)
         {
             var existingUser = await _userRepository.GetByUsernameAsync(username);
 
-            if (existingUser != null) throw new InvalidOperationException("User already exists");
+            if (existingUser != null) return new UserRegistrationResult { Success = false, ErrorMessage = "User already exists" };
 
             byte[] passwordHash, passwordSalt;
             _passwordHasher.CreatePasswordHash(password, out passwordHash, out passwordSalt);
@@ -46,10 +47,12 @@ namespace Infrastructure_Layer.Services.Auth
 
             string token = await _authService.GenerateJwtToken(newUser, CancellationToken.None);
 
-            newUser.PasswordHash = null;
-            newUser.PasswordSalt = null;
-
-            return newUser;
+            return new UserRegistrationResult
+            {
+                Success = true,
+                User = newUser, 
+                Token = token
+            };
 
         }
     }
