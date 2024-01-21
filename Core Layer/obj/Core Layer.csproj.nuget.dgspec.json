@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
             "Grpc.AspNetCore": {
               "target": "Package",
               "version": "[2.59.0, )"

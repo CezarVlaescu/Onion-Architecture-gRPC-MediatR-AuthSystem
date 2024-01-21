@@ -1,5 +1,5 @@
 ﻿using Core_Layer.Entities.Auth;
-using Infrastructure_Layer.Utils;
+using Core_Layer.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;

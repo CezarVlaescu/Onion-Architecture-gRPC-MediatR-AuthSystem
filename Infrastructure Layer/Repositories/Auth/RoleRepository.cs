@@ -19,11 +19,13 @@ namespace Infrastructure_Layer.Repositories.Auth
         {
             _dbContext = dbContext; // TO DO : throw an exception 
         }
-        public async Task AssignRoleToUserAsync(User user, Roles role)
+        public async Task<bool> AssignRoleToUserAsync(User user, Roles role)
         {
             var userEntity = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == user.Email) ?? throw new Exception("User not found");
             userEntity.Role = role;
             await _dbContext.SaveChangesAsync();
+
+            return true;
         }
 
         public Task<Roles> GetRoleByNameAsync(string roleName) => 

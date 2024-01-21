@@ -1,5 +1,10 @@
-﻿using Application_Layer.Dtos.Auth;
+﻿using Application_Layer.Commands.Auth;
+using Application_Layer.Dtos.Auth;
+using Core_Layer.Entities.Auth;
+using Core_Layer.Interfaces.Repository.Auth;
 using Core_Layer.Interfaces.Services.Auth;
+using Core_Layer.Utils;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -12,13 +17,17 @@ namespace WebAPI.Controllers.Auth
     {
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
+        private readonly IRoleRepository _roleRepository;
+        private readonly IMediator _mediator;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IAuthService authService, IUserService userService, ILogger<AuthController> logger)
+        public AuthController(IAuthService authService, IUserService userService, IRoleRepository roleRepository, IMediator mediator, ILogger<AuthController> logger)
         {
+            _roleRepository = roleRepository;
             _authService = authService;
             _userService = userService;
             _logger = logger;
+            _mediator = mediator;
         }
 
         [HttpPost("register")]
@@ -30,9 +39,22 @@ namespace WebAPI.Controllers.Auth
             {
                 return BadRequest(new { error = result.ErrorMessage });
             }
-
-            // Adjust the response as needed. You might want to include the token in the response.
             return CreatedAtAction(nameof(_userService.GetUserAsync), new { id = result.User.Id }, new { user = result.User, token = result.Token });
+        }
+
+        [HttpPost("assign-role")]
+        public async Task<IActionResult> AssignRole([FromBody] RoleAssignmentDto roleAssignmentDto)
+        {
+            var command = new RoleAssignmentCommand
+            {
+                UserId = roleAssignmentDto.UserId,
+                Role = roleAssignmentDto.Role
+            };
+
+            var result = await _mediator.Send(command);
+
+            if (result.Success) return Ok(new { message = "Role assigned successfully" });
+            else return BadRequest(new { error = result.ErrorMessage });
         }
     }
 }

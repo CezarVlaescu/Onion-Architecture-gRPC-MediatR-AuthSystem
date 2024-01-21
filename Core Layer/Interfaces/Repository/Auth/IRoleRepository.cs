@@ -11,7 +11,7 @@ namespace Core_Layer.Interfaces.Repository.Auth
     public interface IRoleRepository
     {
         Task<Roles> GetRoleByNameAsync(string roleName);
-        Task AssignRoleToUserAsync(User user, Roles role);
+        Task<bool> AssignRoleToUserAsync(User user, Roles role);
         Task UnassignRoleFromUserAsync(User user, Roles role);
     }
 }

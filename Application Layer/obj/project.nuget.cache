@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6ehnsCNakKACTxVQ/v6g6WZMFrpSOEGxp2H25px9MHeHorBcE1fW0Ndwnr7t5sl+K0sNLSGCE/jqwHAg7sY7zg==",
+  "dgSpecHash": "E6Zx69lubWjKwebqvu+dNSZCy5PDqjRrT5hTb5GWnILKBnlCYbeas1pxogQI1CI1MSe8ryw9SHiSOAYLHsc+WQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\vlaes\\source\\repos\\Onion Arhitecture - MediatR - gRPC\\Application Layer\\Application Layer.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "C:\\Users\\vlaes\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\vlaes\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\vlaes\\.nuget\\packages\\fluentvalidation\\11.8.1\\fluentvalidation.11.8.1.nupkg.sha512",
+    "C:\\Users\\vlaes\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\vlaes\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\vlaes\\.nuget\\packages\\google.protobuf\\3.23.1\\google.protobuf.3.23.1.nupkg.sha512",
     "C:\\Users\\vlaes\\.nuget\\packages\\grpc.aspnetcore\\2.59.0\\grpc.aspnetcore.2.59.0.nupkg.sha512",
     "C:\\Users\\vlaes\\.nuget\\packages\\grpc.aspnetcore.server\\2.59.0\\grpc.aspnetcore.server.2.59.0.nupkg.sha512",
