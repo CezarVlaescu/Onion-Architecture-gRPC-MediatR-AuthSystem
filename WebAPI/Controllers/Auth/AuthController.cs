@@ -56,5 +56,8 @@ namespace WebAPI.Controllers.Auth
             if (result.Success) return Ok(new { message = "Role assigned successfully" });
             else return BadRequest(new { error = result.ErrorMessage });
         }
+
+        // [HttpDelete("delete-account")]
+
     }
 }
