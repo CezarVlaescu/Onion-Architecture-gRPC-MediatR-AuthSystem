@@ -24,8 +24,6 @@ namespace Infrastructure_Layer.Services.Auth
         }
         public Task<string> GenerateJwtToken(User user, CancellationToken cancellationToken)
         {
-            cancellationToken.ThrowIfCancellationRequested();
-
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
             var tokenDescriptor = new SecurityTokenDescriptor

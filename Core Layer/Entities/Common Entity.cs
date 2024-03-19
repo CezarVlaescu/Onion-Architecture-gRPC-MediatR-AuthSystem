@@ -12,5 +12,6 @@ namespace Core_Layer.Entities
         public int Id { get; set; } // the ID is necessary for DB, is unique and present for all entities
 
         public DateTime CreatedAt { get; set; }
+
     }
 }

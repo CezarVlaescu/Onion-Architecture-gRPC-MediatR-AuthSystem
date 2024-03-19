@@ -30,7 +30,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseMiddleware<CustomExceptionHandlerMiddleware>();
+app.UseCors(x =>
+{
+    x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+});
+
+//app.UseMiddleware<CustomExceptionHandlerMiddleware>();
 
 app.UseAuthorization();
 

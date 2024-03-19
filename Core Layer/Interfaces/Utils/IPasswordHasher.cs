@@ -11,3 +11,5 @@ namespace Core_Layer.Interfaces.Utils
         void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt);
     }
 }
+
+    

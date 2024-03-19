@@ -4,9 +4,11 @@ using Core_Layer.Entities.Auth;
 using Core_Layer.Interfaces.Repository.Auth;
 using Core_Layer.Interfaces.Services.Auth;
 using Core_Layer.Utils;
+using Infrastructure_Layer.Repositories.Auth;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Linq;
 
 
 namespace WebAPI.Controllers.Auth
@@ -18,14 +20,17 @@ namespace WebAPI.Controllers.Auth
         private readonly IAuthService _authService;
         private readonly IUserService _userService;
         private readonly IRoleRepository _roleRepository;
+        private readonly IUserRepository _userRepository;
+
         private readonly IMediator _mediator;
         private readonly ILogger<AuthController> _logger;
 
-        public AuthController(IAuthService authService, IUserService userService, IRoleRepository roleRepository, IMediator mediator, ILogger<AuthController> logger)
+        public AuthController(IUserRepository userRepository ,IAuthService authService, IUserService userService, IRoleRepository roleRepository, IMediator mediator, ILogger<AuthController> logger)
         {
             _roleRepository = roleRepository;
             _authService = authService;
             _userService = userService;
+            _userRepository = userRepository;
             _logger = logger;
             _mediator = mediator;
         }
@@ -34,6 +39,8 @@ namespace WebAPI.Controllers.Auth
         public async Task<IActionResult> RegisterUser([FromBody] RegisterDto registerDto)
         {
             var result = await _userService.RegisterUserAsync(registerDto.Username, registerDto.Email, registerDto.Password, registerDto.Firstname, registerDto.Lastname);
+
+            Console.WriteLine(result.Token);
 
             if (!result.Success)
             {
@@ -57,7 +64,7 @@ namespace WebAPI.Controllers.Auth
             else return BadRequest(new { error = result.ErrorMessage });
         }
 
-        // [HttpDelete("delete-account")]
+        // [HttpGet("login")]
 
     }
 }
