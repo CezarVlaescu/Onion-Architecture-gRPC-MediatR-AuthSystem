@@ -35,18 +35,25 @@ namespace WebAPI.Controllers.Auth
             _mediator = mediator;
         }
 
+        [HttpGet("user/{username}")]
+        public async Task<IActionResult> GetUserByUsername(string username)
+        {
+            var user = await _userService.GetUserAsync(username);
+
+            if(user == null) return NotFound();
+
+            return Ok(user);
+        }
+
+
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterDto registerDto)
         {
             var result = await _userService.RegisterUserAsync(registerDto.Username, registerDto.Email, registerDto.Password, registerDto.Firstname, registerDto.Lastname);
 
-            Console.WriteLine(result.Token);
+            if (!result.Success) return BadRequest(new { error = result.ErrorMessage });
 
-            if (!result.Success)
-            {
-                return BadRequest(new { error = result.ErrorMessage });
-            }
-            return CreatedAtAction(nameof(_userService.GetUserAsync), new { id = result.User.Id }, new { user = result.User, token = result.Token });
+            return CreatedAtAction(nameof(GetUserByUsername), new { username = result.User.Username }, new { user = result.User, token = result.Token });
         }
 
         [HttpPost("assign-role")]
