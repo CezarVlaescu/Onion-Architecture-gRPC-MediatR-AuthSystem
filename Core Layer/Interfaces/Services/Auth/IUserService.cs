@@ -12,5 +12,7 @@ namespace Core_Layer.Interfaces.Services.Auth
     {
         Task<UserRegistrationResult> RegisterUserAsync(string username, string email, string password, string firstname, string lastname);
         Task<User> GetUserAsync(string username);
+
+        Task<UserLoginResult> LoginUserAsync(string username, string password);
     }
 }
