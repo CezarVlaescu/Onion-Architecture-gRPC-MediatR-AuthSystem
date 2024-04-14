@@ -26,6 +26,12 @@ namespace Infrastructure_Layer.Services.Auth
 
         public async Task<User> GetUserAsync(string username) => await _userRepository.GetByUsernameAsync(username);
 
+        public Task<UserLoginResult> LoginUserAsync(string username, string password)
+        {
+            //TODO: IMPLEMENTATION
+            throw new NotImplementedException();
+        }
+
         public async Task<UserRegistrationResult> RegisterUserAsync(string username, string email, string password, string firstname, string lastname)
         {
             var existingUser = await _userRepository.GetByUsernameAsync(username);
